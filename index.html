@@ -108,7 +108,8 @@
               <li>선택품목<br>캐스퍼 액티브 ll</li>
               <li><em class="price">19,600,000</em>원</li>
             </ul>
-            <input type="button" value="견적내기 &gt;" class="total_price_btn">
+            <div class="swiper-pagination2"></div>
+            <input type="button" value="견적내기 &gt;" class="btn b_btn">
           </div>
           <div class="swiper-slide">
             <span class="rank">2위</span>
@@ -120,7 +121,8 @@
               <li>선택품목<br>캐스퍼 액티브 ll</li>
               <li><em class="price">19,600,000</em>원</li>
             </ul>
-            <input type="button" value="견적내기 &gt;" class="total_price_btn">
+            <div class="swiper-pagination2"></div>
+            <input type="button" value="견적내기 &gt;" class="btn b_btn">
           </div>
           <div class="swiper-slide">
             <span class="rank">3위</span>
@@ -132,7 +134,8 @@
               <li>선택품목<br>캐스퍼 액티브 ll</li>
               <li><em class="price">19,600,000</em>원</li>
             </ul>
-            <input type="button" value="견적내기 &gt;" class="total_price_btn">
+            <div class="swiper-pagination2"></div>
+            <input type="button" value="견적내기 &gt;" class="btn b_btn">
           </div>
         </div>
         <!-- 콘트롤 버튼 -->
@@ -146,10 +149,36 @@
 
     <section id="intro">
       <h2>소개</h2>
+      <span class="intro_title_left">강인하고<br>아이코닉한 SUV </span>
+      <span class="intro_title_right">젊고 역동적인<br>감성의<br>SUV디자인</span>
+
+      <video autoplay muted >
+        <source src="./movie/highlight_intro.mp4" type="video/mp4">
+      </video>
+
+      <input type="button" value="더보기 &gt;" class="btn g_btn">
     </section>
     
     <section id="test">
       <h2>시승신청</h2>
+      <p class="p01">캐스퍼가 제공하는 편리한 시승 서비스를 이용해 보세요.</p>
+
+      <article class="test_deive_l">
+        <h3>현대자동차 드라이빙 라운지<br>/CASPER STUDIO시승</h3>
+        <p class="p02">드라이빙 라운지와 CASPER STUDIO에서<br> 캐스퍼를 체험해보세요</p>
+        <a href="#" title="시승신청하기" class="btn b_btn02">시승신청하기</a>
+        <a href="#" title="" class="btn02">시승신청조회 &#x003e;</a>
+        <p class="p_bottom">&middot; 시승 신청은 만21세 이상 운전면허 소지자면 누구나 이용 가능합니다.</p>
+      </article>
+
+      <article class="test_deive_r">
+        <h3>쏘카<br>카쉐어링 시승</h3>
+        <p class="p02">24시간 언제나 내 근터에서 편리하게<br>캐스퍼를 체험할 수 있습니다.</p>
+        <a href="#" title="시승신청하기" class="btn b_btn02">시승신청하기</a>
+        <p class="p_bottom02">&middot; 시승 신청은 만21세 이상, 운전면허 취득 1년 이상 시 이용할 수 있습니다.</p>
+      </article>
+
+
     </section>
 
     <section id="event">
@@ -208,12 +237,13 @@
         delay: 2500,
         disableOnInteraction: false,
       },
-      navigation:{
+      navigation:{ // 좌, 우 방향버튼 나오게(클릭 가능)
         nextEl: ".top3 .swiper-button-next",
         prevEl: ".top3 .swiper-button-prev",
       },
       pagination:{
-        el: ".swiper-pagination2"
+        el: ".swiper-pagination2",
+        clickable: true, //컨트롤버튼 클릭 가능
       }
     });
   </script>
