@@ -51,8 +51,8 @@ main{}
 
 /*  섹션 별 공통 서식 */
 #test, #event, #buy, #cs{
-  margin: 120px auto;
-  width: 1200px;height: 800px;
+  margin: 150px auto;
+  width: 1200px;
 }
 
 /* 메인 콘텐츠 공통제목 */
@@ -102,6 +102,10 @@ main section > h2{
   justify-content: center;
   padding-bottom: 60px;
 }
+
+.swiper-slide-active img {transform: scale(1.5);}
+.swiper-slide img {transition: 0.5s;}
+
 .top3 .detail li{
   width: 180px;
   border-right: 1px solid #ccc;
@@ -235,3 +239,83 @@ main section > h2{
 }
 .p_bottom {transform: translateY(50px);}
 .p_bottom02 {transform: translateY(90px);}
+
+/* 이벤트 & 프로모션 */
+#event {
+  background: #e6e6e6;
+  width: 100%; height: 500px;
+  padding: 60px;
+}
+.event_banner {
+  position: relative;
+  width: 1200px; height: 440px;
+  margin: 40px auto 0 auto;
+  overflow: hidden;
+}
+.event_banner> ul {
+  display: flex;
+  width: 4800px;
+  position: absolute;
+}
+.event_banner .ctrl_btn {
+  width: 280px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute; bottom: 90px; left: 50%;
+  transform: translateX(-50%);
+}
+
+.event_banner .ctrl_btn span {
+  width: 60px; height: 8px;
+  background: #ccc;
+  display: inline-block;
+}
+.act01 {
+  background: #333 !important;
+}
+
+/* 캐스퍼 구매 안내 */
+#buy {text-align: center;}
+#buy h3 {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 60px 0;
+}
+.t_color {
+  color:var(--t-color03);
+}
+
+#buy ul {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* -- 플로트 방식의 단점은 부모의 높이가 사라짐
+      이에 부모박스 뒤쪽에 가상의 공간(::after)을 만들어주어야함.
+*/
+.clearfix::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#buy ul li {
+  float: left; /*부모에게 너비값이 있어야 함.*/
+  width: calc(100% / 3);
+  margin-bottom: 60px;
+}
+#buy ul li h4 {
+  font-size: var(--t-size16);
+  font-weight: bold;
+}
+#buy ul li img {
+  width: 70px;
+  padding: 15px 0;
+}
+#buy ul li .p03 {
+  line-height: 20px;
+}
+
+#buy iframe {
+  width: 1000px; height: 560px;
+  border: none;
+} 
